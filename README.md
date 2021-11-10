@@ -1,4 +1,4 @@
-# Scraping application target players metadata of (FIFA Index)[https://www.fifaindex.com/players/]
+# Scraping application target players metadata of [FIFA Index](https://www.fifaindex.com/players/)
 
 ## installation
 
