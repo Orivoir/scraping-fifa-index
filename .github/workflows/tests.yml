@@ -30,7 +30,7 @@ jobs:
           coverage: xdebug
       
       - name: Install Dependencies
-        run: npm run install
+        run: npm install
       
       - name: Suited test
         run: npm run test
