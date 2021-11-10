@@ -1,0 +1,36 @@
+{
+  "name": "scraping-fifa-index",
+  "version": "1.0.0",
+  "description": "Scraping application target players metadata of FIFA Index at (https://www.fifaindex.com/players/)",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o ./dist/app.js",
+    "test": "mocha ./test/index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orivoir/scraping-fifa-index.git"
+  },
+  "keywords": [
+    "fifa",
+    "index",
+    "api",
+    "football",
+    "foot",
+    "players",
+    "database"
+  ],
+  "author": "Samuel GABORIEAU <sam.gabor@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orivoir/scraping-fifa-index/issues"
+  },
+  "homepage": "https://github.com/Orivoir/scraping-fifa-index#readme",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "chai": "^4.3.4",
+    "jsdom": "18.0.1",
+    "jsdom-global": "3.0.2",
+    "mocha": "^9.1.3"
+  }
+}
