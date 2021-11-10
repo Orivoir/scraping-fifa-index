@@ -21,17 +21,35 @@ const getPlayersListUrl = (page, gender) => (
   `${BASE_URL_PLAYERS_LIST}?page=${page}&gender=${gender}`
 );
 
+const getPlayerUrl = (playerId) => (
+  `${BASE_URL_PLAYER}${playerId}`
+);
+
 const PLAYER_GENDER_MEN = 0;
 const PLAYER_GENDER_WOMEN = 1;
-const SELECTOR_ROW_PLAYER = "table tr[data-playerid]"
+
+// selector for a players list page
+const SELECTOR_ROW_PLAYER = "table tr[data-playerid]";
+
+// selectors for single page player
+const SELECTOR_PLAYER_CONTAINER = "main div.row div.col-lg-8";
+const SELECTOR_PLAYER_HEADER = "div.col-sm-6 div.d-flex.mb-3.align-items-center";
+const SELECTOR_PLAYER_SECONDARY = "div.col-sm-6:nth-child(2) div.card.mb-5";
+const SELECTOR_PLAYER_SKILL_CONTAINER = "div.item div.card.mb-5";
 
 module.exports = {
   getPlayerImageUrl,
   getCountryImageUrl,
   getClubImageUrl,
   getPlayersListUrl,
+  getPlayerUrl,
 
   SELECTOR_ROW_PLAYER,
   PLAYER_GENDER_MEN,
-  PLAYER_GENDER_WOMEN
+  PLAYER_GENDER_WOMEN,
+
+  SELECTOR_PLAYER_CONTAINER,
+  SELECTOR_PLAYER_HEADER,
+  SELECTOR_PLAYER_SECONDARY,
+  SELECTOR_PLAYER_SKILL_CONTAINER
 };
