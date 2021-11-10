@@ -1,5 +1,9 @@
 # Scraping application target players metadata of [FIFA Index](https://www.fifaindex.com/players/)
 
+<p align="left">
+  <a href="https://github.com/Orivoir/scraping-fifa-index/actions/workflows/tests.yml"><img alt="tests status" src="https://github.com/Orivoir/scraping-fifa-index/workflows/Tests/badge.svg"></a> 
+</p>
+
 ## installation
 
 ```bash
