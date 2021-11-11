@@ -1,3 +1,28 @@
+const UPLOAD_SERVER_BASE_URL = "http://localhost:8000";
+
+const getNextPage = async ({baseUrl=UPLOAD_SERVER_BASE_URL}) => {
+
+  const response = await fetch(`${baseUrl}/next-page`, {method: "GET"});
+  const data = await response.json();
+
+  return data.page;
+};
+
+const uploadPlayers = async ({players, filename, baseUrl=UPLOAD_SERVER_BASE_URL}) => {
+
+  const response =  await fetch(`${baseUrl}/upload?filename=${filename}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({players: players})
+  });
+
+  const data = await response.json();
+
+  return data.insertedCount;
+};
+
 const BASE_URL_PLAYERS_LIST = "https://www.fifaindex.com/players/";
 const BASE_URL_PLAYER = "https://www.fifaindex.com/player/";
 
@@ -43,6 +68,9 @@ module.exports = {
   getClubImageUrl,
   getPlayersListUrl,
   getPlayerUrl,
+
+  getNextPage,
+  uploadPlayers,
 
   SELECTOR_ROW_PLAYER,
   PLAYER_GENDER_MEN,
