@@ -2,6 +2,7 @@
  * Short data player definition from player list page
  * @typedef {Object} DataPlayerRow
  * @property {fullName} string - contains last name and first name
+ * @property {id} number - player unid id
  * @property {countryId} number - country uniq id of player use for build country image URL
  * @property {countryName} string - country name of player
  * @property {rangeRank} number[] - fifa rank of player `[min, max]`
@@ -42,6 +43,8 @@ function extractPlayerListItem(playerRowItem) {
     throw new Error('arg1 HTMLTableRowElement has invalid format');
   }
 
+  const id = parseInt(playerRowItem.querySelector('td figure.player a img').src.split('/').pop());
+
   const fullName = tdName.textContent.trim();
 
   const countryLink = tdNationality.querySelector('a');
@@ -60,6 +63,7 @@ function extractPlayerListItem(playerRowItem) {
   const clubName = clubImage.alt.replace(/FIFA 2[\d]/, '');
 
   return {
+    id,
     fullName,
     countryId,
     countryName,

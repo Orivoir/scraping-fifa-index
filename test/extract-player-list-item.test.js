@@ -28,6 +28,9 @@ describe('extract-player-list-item', () => {
           expect(playerData).to.has.property('fullName');
           assert.isString(playerData.fullName);
 
+          expect(playerData).to.has.property('id');
+          assert.isNumber(playerData.id);
+
           expect(playerData).to.has.property('countryId');
           assert.isNumber(playerData.countryId);
 
