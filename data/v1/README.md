@@ -44,14 +44,12 @@ type Player = {
 
   // club team required
   // national team optional (only if selected)
-  teams: [
-    {
+  teams: {
       id: number; // club id (same of clubId if not national team)
       name: string; // club name (same of clubName if not national team)
       kitNumber: number;
       joinedClub?: number; // timestamp ms
-    }
-  ],
+    }[],
 
   // player stats
   skills: {
